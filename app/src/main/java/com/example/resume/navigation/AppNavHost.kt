@@ -17,7 +17,9 @@ fun AppNavHost(){
         navController = navController
     ){
         composable(Screen.Home.route){
-            HomeRoute()
+            HomeRoute(
+                onClick = { navController.navigate(Screen.Details.route) }
+            )
         }
     }
 
